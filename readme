@@ -1,0 +1,30 @@
+# Terraform module to create and deploy Windows Server 2025 VM with Azure Bastion
+
+## What Gets deployed
+
+┌─────────────────────────────────────────────────────────┐
+│                    Resource Group                       │
+│  ┌───────────────────────────────────────────────────┐  │
+│  │           Virtual Network (10.0.0.0/16)           │  │
+│  │  ┌─────────────────┐    ┌────────────────────┐    │  │
+│  │  │  VM Subnet      │    │  Bastion Subnet    │    │  │
+│  │  │  (10.0.1.0/24)  │    │  (10.0.2.0/26)     │    │  │
+│  │  │  ┌───────────┐  │    │  ┌──────────────┐  │    │  │
+│  │  │  │ Windows   │  │    │  │    Bastion   │  │    │  │
+│  │  │  │ Server    │◄─┼────┼──┤     RDP      │  │    │  │
+│  │  │  │  2025     │  │    │  │    Access    │  │    │  │
+│  │  │  │ (Private) │  │    │  │              │  │    │  │
+│  │  │  └───────────┘  │    │  └──────────────┘  │    │  │
+│  │  └─────────────────┘    └────────────────────┘    │  │
+│  └───────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────┘
+
+### Resources Created
+
+- 1× Resource Group
+- 1× Virtual Network
+- 2× Subnets (VM + Bastion)
+- 1× Network Interface
+- 1× Windows Virtual Machine (Windows Server 2025 Datacenter Azure Edition)
+- 1× Azure Bastion Host
+- 1× Public IP (for Bastion)
