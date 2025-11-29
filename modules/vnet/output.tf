@@ -1,4 +1,5 @@
 output "network_interface_id" {
+  description = "The ID of the network interface"
   value = azurerm_network_interface.main.id
 }
 output "vm_private_ip" {

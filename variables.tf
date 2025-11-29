@@ -59,7 +59,7 @@ variable "bastion_subnet_address_prefixes" {
 variable "bastion_public_ip" {
   description = "Settings for the VM's IP settings (e.g. allocation)"
   type        = string
-  default = "Static"
+  default     = "Static"
 }
 variable "bastion_public_ip_name" {
   type    = string

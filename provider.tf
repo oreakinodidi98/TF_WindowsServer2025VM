@@ -27,6 +27,7 @@ terraform {
     storage_account_name = "tfstate01919804057"
     container_name       = "tfstate"
     key                  = "vm_bastion.tfstate"
+    use_azuread_auth     = true # Use Azure AD authentication (recommended)
   }
 
 }
