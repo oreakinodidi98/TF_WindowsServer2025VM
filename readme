@@ -28,3 +28,13 @@
 - 1× Windows Virtual Machine (Windows Server 2025 Datacenter Azure Edition)
 - 1× Azure Bastion Host
 - 1× Public IP (for Bastion)
+
+## Steps
+
+- Step 0: Configure Terraform Remote Backend (state storage)
+- Step 1: Create Azure Service Principal (Azure credentials)
+- Step 2: Grant Service Principal access to backend storage
+- Step 3: Generate strong admin password for Windows VM
+- Step 4: Configure 6 GitHub Secrets (Azure credentials + password)
+- Step 5: Create production environment with reviewers
+- Step 6: Push code to trigger pipeline
